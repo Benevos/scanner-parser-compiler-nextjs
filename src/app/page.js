@@ -44,8 +44,8 @@ export default function Home()
     const compilerTokens = await generateTokens(input.replace('\n', ' '));
     const cleanedCompilerTokens = compilerTokens.filter(token => !(token.value === '\n' && token.type === 'UNKNOWN'));
 
-    //try
-    //{
+    try
+    {
       console.clear();
       console.log(cleanedCompilerTokens)
 
@@ -55,7 +55,11 @@ export default function Home()
         const refactoredCode = code.join('\n');
 
         setPythonCode(refactoredCode);    
-      
+    }
+    catch({ message })
+    {
+      alert(message);
+    }
   }
 
   const handleDownload = async () =>
