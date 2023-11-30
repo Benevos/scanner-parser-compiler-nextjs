@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Figtree');
+
+html, body, :root
+{
+  height: 100%;
+  font-family: 'Figtree';
+  background-color: #364559;
+}
+
+.semantic-grid
+{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 20px;
+}
